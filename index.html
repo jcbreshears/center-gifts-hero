@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Center Gifts - Engraving Hero V2</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Pacifico&family=Roboto:wght@400;500;700&family=Roboto+Slab:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&family=Pacifico&family=Roboto:wght@400;500;700&family=Roboto+Slab:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -24,7 +25,7 @@
   }
 
   body {
-    font-family: 'Lato', 'Roboto', sans-serif;
+    font-family: 'Inter', 'Roboto', sans-serif;
     background: var(--white);
     color: var(--text-body);
     -webkit-font-smoothing: antialiased;
@@ -164,23 +165,25 @@
   }
 
   .hero h1 {
-    font-family: 'Roboto Slab', serif;
-    font-size: 44px;
+    font-family: 'Playfair Display', 'Roboto Slab', serif;
+    font-size: 50px;
     font-weight: 700;
-    line-height: 1.18;
+    line-height: 1.12;
     color: var(--text-body);
-    letter-spacing: -0.5px;
+    letter-spacing: -0.8px;
   }
   .hero h1 .highlight {
     color: var(--brand-primary);
+    font-style: italic;
   }
 
   .hero-sub {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 17px;
-    line-height: 1.7;
+    line-height: 1.65;
     color: var(--text-muted);
-    max-width: 500px;
+    max-width: 510px;
+    font-weight: 400;
   }
 
   .hero-ctas {
@@ -198,7 +201,7 @@
     color: var(--white);
     padding: 16px 34px;
     border-radius: 4px;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 14px;
     font-weight: 700;
     text-decoration: none;
@@ -223,7 +226,7 @@
     padding: 16px 26px;
     border-radius: 4px;
     border: 1.5px solid var(--border);
-    font-family: 'Lato', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 14px;
     font-weight: 700;
     text-decoration: none;
@@ -273,11 +276,12 @@
   }
   .vp-text strong {
     display: block;
-    font-family: 'Lato', sans-serif;
-    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13.5px;
     font-weight: 700;
     color: var(--text-body);
-    margin-bottom: 1px;
+    margin-bottom: 2px;
+    letter-spacing: -0.1px;
   }
 
   /* RIGHT SIDE */
@@ -295,6 +299,13 @@
     box-shadow:
       0 24px 60px rgba(0,0,0,0.10),
       0 4px 16px rgba(0,0,0,0.04);
+    background: #1a1a1a;
+  }
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
 
   .image-placeholder {
@@ -412,7 +423,7 @@
   .proof-avatar.a4 { background: var(--off-white); color: var(--text-muted); font-size: 10px; }
 
   .proof-text {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 14px;
     font-weight: 700;
     color: var(--text-body);
@@ -450,7 +461,7 @@
     fill: #f5a623;
   }
   .rating-num {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 14px;
     font-weight: 700;
     color: var(--text-body);
@@ -505,7 +516,7 @@
           Request a Bulk Quote
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
         </a>
-        <a href="#" class="btn-secondary">See Our Work</a>
+        <a href="#" class="btn-secondary">View Bulk Projects</a>
       </div>
 
       <div class="value-props">
@@ -514,8 +525,8 @@
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" /></svg>
           </div>
           <div class="vp-text">
-            <strong>In-House Production</strong>
-            Full quality control, proof to packaging
+            <strong>Full Control, No Outsourcing</strong>
+            In-house production from proof to packaging
           </div>
         </div>
         <div class="value-prop">
@@ -523,8 +534,8 @@
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
           </div>
           <div class="vp-text">
-            <strong>5-Day Turnaround</strong>
-            Standard production on confirmed orders
+            <strong>Fast Production, No Delays</strong>
+            5-day standard turnaround on confirmed orders
           </div>
         </div>
         <div class="value-prop">
@@ -532,8 +543,8 @@
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
           </div>
           <div class="vp-text">
-            <strong>Dedicated Support</strong>
-            One point of contact for your account
+            <strong>Personal Account Manager</strong>
+            One dedicated point of contact, start to finish
           </div>
         </div>
       </div>
@@ -558,12 +569,11 @@
       </div>
 
       <div class="hero-image">
-        <div class="image-placeholder">
-          <div class="ph-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0 0 22.5 18.75V5.25A2.25 2.25 0 0 0 20.25 3H3.75A2.25 2.25 0 0 0 1.5 5.25v13.5A2.25 2.25 0 0 0 3.75 21Z" /></svg>
-          </div>
-          <span class="ph-label">Engraved product close-up here</span>
-        </div>
+        <img
+          src="https://images.unsplash.com/photo-1513171920216-2640b288471b?auto=format&fit=crop&w=1200&q=80"
+          alt="Engraved corporate gifts and awards — premium bulk production"
+          loading="eager"
+          onerror="this.onerror=null;this.src='https://source.unsplash.com/1200x1000/?engraved,trophy,corporate-gift';">
       </div>
 
       <div class="proof-card">
