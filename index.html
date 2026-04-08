@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Center Gifts - Engraving Hero V2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Pacifico&family=Roboto:wght@400;500;700&family=Roboto+Slab:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --brand-primary: #CC3366;
+    --brand-deep: #741B5F;
+    --brand-hover: #b32d5a;
+    --brand-soft: rgba(204, 51, 102, 0.06);
+    --dark: #23282D;
+    --text-body: #333333;
+    --text-warm: #5B5447;
+    --text-muted: #7A7A7A;
+    --white: #ffffff;
+    --off-white: #f7f5f2;
+    --border: #e6e6e6;
+  }
+
+  body {
+    font-family: 'Lato', 'Roboto', sans-serif;
+    background: var(--white);
+    color: var(--text-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .top-bar {
+    background: var(--brand-deep);
+    color: var(--white);
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    padding: 9px 0;
+  }
+  .top-bar-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .top-bar a {
+    color: rgba(255,255,255,0.9);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .top-bar-left { display: flex; gap: 24px; }
+
+  .navbar {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 0;
+  }
+  .navbar-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo-block { text-align: center; line-height: 1.15; text-decoration: none; display: block; }
+  .logo-script {
+    font-family: 'Pacifico', cursive;
+    font-size: 11px;
+    color: var(--text-warm);
+  }
+  .logo-name {
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-body);
+    letter-spacing: 2.5px;
+  }
+  .logo-year {
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 3px;
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    list-style: none;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: var(--text-warm);
+    font-family: 'Pacifico', cursive;
+    font-size: 15px;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    background: var(--white);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: -120px;
+    right: -80px;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: var(--off-white);
+    z-index: 1;
+  }
+
+  .hero-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px 72px;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 56px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--brand-soft);
+    border: 1px solid rgba(204,51,102,0.12);
+    padding: 7px 16px;
+    border-radius: 100px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--brand-primary);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    width: fit-content;
+  }
+  .hero-badge-dot {
+    width: 7px;
+    height: 7px;
+    background: var(--brand-primary);
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+  }
+
+  .hero h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1.18;
+    color: var(--text-body);
+    letter-spacing: -0.5px;
+  }
+  .hero h1 .highlight {
+    color: var(--brand-primary);
+  }
+
+  .hero-sub {
+    font-family: 'Lato', sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--text-muted);
+    max-width: 500px;
+  }
+
+  .hero-ctas {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 4px;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--brand-primary);
+    color: var(--white);
+    padding: 16px 34px;
+    border-radius: 4px;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: all 0.2s;
+    box-shadow: 0 4px 20px rgba(204, 51, 102, 0.25);
+  }
+  .btn-primary:hover {
+    background: var(--brand-hover);
+    box-shadow: 0 6px 28px rgba(204, 51, 102, 0.35);
+    transform: translateY(-1px);
+  }
+  .btn-primary svg { width: 16px; height: 16px; }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: var(--text-warm);
+    padding: 16px 26px;
+    border-radius: 4px;
+    border: 1.5px solid var(--border);
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: all 0.2s;
+  }
+  .btn-secondary:hover {
+    border-color: var(--brand-primary);
+    color: var(--brand-primary);
+  }
+
+  .value-props {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 12px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+  }
+  .value-prop {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .vp-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--off-white);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 1px solid var(--border);
+  }
+  .vp-icon svg {
+    width: 16px;
+    height: 16px;
+    color: var(--brand-primary);
+  }
+  .vp-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.4;
+  }
+  .vp-text strong {
+    display: block;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-body);
+    margin-bottom: 1px;
+  }
+
+  /* RIGHT SIDE */
+  .hero-visual {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-image {
+    width: 100%;
+    aspect-ratio: 4 / 3.4;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow:
+      0 24px 60px rgba(0,0,0,0.10),
+      0 4px 16px rgba(0,0,0,0.04);
+  }
+
+  .image-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(160deg, #e8e0d6 0%, #d8cfc3 40%, #c8bfb2 70%, #bab0a3 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    position: relative;
+  }
+  .image-placeholder::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.06;
+    background-image:
+      radial-gradient(circle at 25% 35%, var(--brand-primary) 1px, transparent 1px),
+      radial-gradient(circle at 75% 65%, var(--brand-primary) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+  .ph-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+  }
+  .ph-icon svg {
+    width: 22px;
+    height: 22px;
+    color: var(--brand-primary);
+    opacity: 0.7;
+  }
+  .ph-label {
+    position: relative;
+    z-index: 1;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-warm);
+    opacity: 0.5;
+    background: rgba(255,255,255,0.5);
+    padding: 6px 16px;
+    border-radius: 4px;
+  }
+
+  .materials-tag {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: var(--dark);
+    color: var(--white);
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    z-index: 5;
+  }
+  .materials-tag svg {
+    width: 13px;
+    height: 13px;
+    color: var(--brand-primary);
+  }
+
+  .proof-card {
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    background: var(--white);
+    border-radius: 12px;
+    padding: 18px 22px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow:
+      0 12px 40px rgba(0,0,0,0.10),
+      0 2px 8px rgba(0,0,0,0.04);
+    z-index: 10;
+    border: 1px solid rgba(0,0,0,0.04);
+  }
+  .proof-avatars {
+    display: flex;
+  }
+  .proof-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+    margin-left: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--white);
+  }
+  .proof-avatar:first-child { margin-left: 0; }
+  .proof-avatar.a1 { background: var(--brand-primary); }
+  .proof-avatar.a2 { background: var(--brand-deep); }
+  .proof-avatar.a3 { background: var(--text-warm); }
+  .proof-avatar.a4 { background: var(--off-white); color: var(--text-muted); font-size: 10px; }
+
+  .proof-text {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-body);
+    line-height: 1.3;
+  }
+  .proof-sub {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  .rating-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: var(--white);
+    border-radius: 10px;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow:
+      0 6px 24px rgba(0,0,0,0.08),
+      0 2px 6px rgba(0,0,0,0.03);
+    z-index: 10;
+    border: 1px solid rgba(0,0,0,0.04);
+  }
+  .rating-stars {
+    display: flex;
+    gap: 1px;
+  }
+  .rating-stars svg {
+    width: 13px;
+    height: 13px;
+    fill: #f5a623;
+  }
+  .rating-num {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-body);
+  }
+
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <div class="top-bar-left">
+      <a href="#">&#9993; Email: <span class="__cf_email__" data-cfemail="90f9fef6ffd0d3f5fee4f5e2bed7f9f6e4e3">[email&#160;protected]</span></a>
+      <a href="#">&#9742; Phone: (949) 354 4383</a>
+    </div>
+    <a href="#">Client Login</a>
+  </div>
+</div>
+
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="#" class="logo-block">
+      <span class="logo-script">Be the Best with the Best</span>
+      <div class="logo-name">CENTER.GIFTS</div>
+      <span class="logo-year">&#9733; 2009 &#9733;</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Our Team</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Testimonials</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        B2B Engraving Services
+      </div>
+
+      <h1>Precision Engraving for <span class="highlight">Corporate Gifts &amp; Bulk Orders</span></h1>
+
+      <p class="hero-sub">Reliable quality, consistent execution, and on-time delivery for orders from 50 to 5,000+ units.</p>
+
+      <div class="hero-ctas">
+        <a href="#" class="btn-primary">
+          Request a Bulk Quote
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+        </a>
+        <a href="#" class="btn-secondary">See Our Work</a>
+      </div>
+
+      <div class="value-props">
+        <div class="value-prop">
+          <div class="vp-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" /></svg>
+          </div>
+          <div class="vp-text">
+            <strong>In-House Production</strong>
+            Full quality control, proof to packaging
+          </div>
+        </div>
+        <div class="value-prop">
+          <div class="vp-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          </div>
+          <div class="vp-text">
+            <strong>5-Day Turnaround</strong>
+            Standard production on confirmed orders
+          </div>
+        </div>
+        <div class="value-prop">
+          <div class="vp-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
+          </div>
+          <div class="vp-text">
+            <strong>Dedicated Support</strong>
+            One point of contact for your account
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hero-visual">
+      <div class="materials-tag">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" /></svg>
+        Glass · Metal · Wood
+      </div>
+
+      <div class="rating-badge">
+        <div class="rating-stars">
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.33L10 13.27l-4.77 2.51.91-5.33L2.27 6.68l5.34-.78L10 1z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.33L10 13.27l-4.77 2.51.91-5.33L2.27 6.68l5.34-.78L10 1z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.33L10 13.27l-4.77 2.51.91-5.33L2.27 6.68l5.34-.78L10 1z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.33L10 13.27l-4.77 2.51.91-5.33L2.27 6.68l5.34-.78L10 1z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.33L10 13.27l-4.77 2.51.91-5.33L2.27 6.68l5.34-.78L10 1z"/></svg>
+        </div>
+        <span class="rating-num">4.9</span>
+      </div>
+
+      <div class="hero-image">
+        <div class="image-placeholder">
+          <div class="ph-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0 0 22.5 18.75V5.25A2.25 2.25 0 0 0 20.25 3H3.75A2.25 2.25 0 0 0 1.5 5.25v13.5A2.25 2.25 0 0 0 3.75 21Z" /></svg>
+          </div>
+          <span class="ph-label">Engraved product close-up here</span>
+        </div>
+      </div>
+
+      <div class="proof-card">
+        <div class="proof-avatars">
+          <div class="proof-avatar a1">JM</div>
+          <div class="proof-avatar a2">SK</div>
+          <div class="proof-avatar a3">RL</div>
+          <div class="proof-avatar a4">+200</div>
+        </div>
+        <div>
+          <div class="proof-text">Trusted by 200+ companies</div>
+          <div class="proof-sub">10,000+ orders fulfilled</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
