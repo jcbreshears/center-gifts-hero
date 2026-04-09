@@ -14,19 +14,21 @@
     --brand-primary: #CC3366;
     --brand-deep: #741B5F;
     --brand-hover: #b32d5a;
-    --brand-soft: rgba(204, 51, 102, 0.06);
+    --brand-soft: rgba(204, 51, 102, 0.08);
     --dark: #23282D;
     --text-body: #333333;
     --text-warm: #5B5447;
     --text-muted: #7A7A7A;
     --white: #ffffff;
+    --cream: #f5eedd;
+    --cream-soft: #efe7d2;
     --off-white: #f7f5f2;
-    --border: #e6e6e6;
+    --border: #e6dfca;
   }
 
   body {
     font-family: 'Manrope', 'Roboto', sans-serif;
-    background: var(--white);
+    background: var(--cream) url('https://www.center.gifts/wp-content/uploads/2016/02/bgnew.jpg') repeat;
     color: var(--text-body);
     -webkit-font-smoothing: antialiased;
   }
@@ -56,7 +58,7 @@
   .top-bar-left { display: flex; gap: 24px; }
 
   .navbar {
-    background: var(--white);
+    background: transparent;
     border-bottom: 1px solid var(--border);
     padding: 14px 0;
   }
@@ -102,7 +104,7 @@
 
   /* ===== HERO ===== */
   .hero {
-    background: var(--white);
+    background: transparent;
     position: relative;
     overflow: hidden;
   }
@@ -114,7 +116,7 @@
     width: 600px;
     height: 600px;
     border-radius: 50%;
-    background: var(--off-white);
+    background: rgba(255, 255, 255, 0.45);
     z-index: 1;
   }
 
@@ -252,20 +254,24 @@
     gap: 12px;
   }
   .vp-icon {
-    width: 36px;
-    height: 36px;
-    background: var(--off-white);
-    border-radius: 8px;
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(145deg, var(--brand-primary) 0%, var(--brand-deep) 100%);
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    border: 1px solid var(--border);
+    border: none;
+    box-shadow:
+      0 6px 14px rgba(204, 51, 102, 0.28),
+      inset 0 1px 0 rgba(255,255,255,0.18);
   }
   .vp-icon svg {
-    width: 16px;
-    height: 16px;
-    color: var(--brand-primary);
+    width: 20px;
+    height: 20px;
+    color: var(--white);
+    fill: var(--white);
   }
   .vp-text {
     font-family: 'Roboto', sans-serif;
@@ -521,7 +527,7 @@
       <div class="value-props">
         <div class="value-prop">
           <div class="vp-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 22H2V10.5l6 3.5V10.5l6 3.5V8.5l5-2.5v3l3-1.5V22zM6 19h2v-3H6v3zm5 0h2v-3h-2v3zm5 0h2v-3h-2v3z"/></svg>
           </div>
           <div class="vp-text">
             <strong>Full Control, No Outsourcing</strong>
@@ -530,7 +536,7 @@
         </div>
         <div class="value-prop">
           <div class="vp-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 01.359.852L12.982 9.75h7.268a.75.75 0 01.548 1.262l-10.5 11.25a.75.75 0 01-1.272-.71l1.992-7.302H3.75a.75.75 0 01-.548-1.262l10.5-11.25a.75.75 0 01.913-.143z" clip-rule="evenodd"/></svg>
           </div>
           <div class="vp-text">
             <strong>Fast Production, No Delays</strong>
@@ -539,7 +545,7 @@
         </div>
         <div class="value-prop">
           <div class="vp-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C7.03 2 3 6.03 3 11v6.5A2.5 2.5 0 005.5 20H8v-9H5v-.5a7 7 0 0114 0v.5h-3v9h2.5a2.5 2.5 0 002.5-2.5V11c0-4.97-4.03-9-9-9zm5 18.5c0 1.93-1.57 3.5-3.5 3.5h-3v-2h3c.83 0 1.5-.67 1.5-1.5h2z"/></svg>
           </div>
           <div class="vp-text">
             <strong>Personal Account Manager</strong>
