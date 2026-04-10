@@ -528,13 +528,22 @@
   .why-card h3 { font-family: 'Manrope', sans-serif; font-size: 16px; font-weight: 700; color: var(--white); margin-bottom: 6px; }
   .why-card p { font-family: 'Manrope', sans-serif; font-size: 14px; line-height: 1.6; color: rgba(255,255,255,0.55); }
 
-  .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-  .portfolio-item { border-radius: 10px; overflow: hidden; position: relative; aspect-ratio: 4/3; background: #1a1a1a; cursor: pointer; }
-  .portfolio-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s; }
-  .portfolio-item:hover img { transform: scale(1.05); }
-  .portfolio-item .overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 50%); display: flex; align-items: flex-end; padding: 20px; opacity: 0; transition: opacity 0.3s; }
-  .portfolio-item:hover .overlay { opacity: 1; }
-  .overlay-text { font-family: 'Manrope', sans-serif; font-size: 14px; font-weight: 600; color: var(--white); }
+  .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .portfolio-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: all 0.25s; }
+  .portfolio-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.08); border-color: var(--brand-primary); }
+  .portfolio-card-img { width: 100%; aspect-ratio: 4/3; overflow: hidden; position: relative; background: #1a1a1a; }
+  .portfolio-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s; }
+  .portfolio-card:hover .portfolio-card-img img { transform: scale(1.05); }
+  .portfolio-card-body { padding: 20px 24px 24px; }
+  .portfolio-card-type { font-family: 'Manrope', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brand-primary); margin-bottom: 6px; }
+  .portfolio-card-title { font-family: 'Manrope', sans-serif; font-size: 17px; font-weight: 700; color: var(--text-body); margin-bottom: 4px; }
+  .portfolio-card-qty { font-family: 'Manrope', sans-serif; font-size: 13px; font-weight: 600; color: var(--text-warm); margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+  .portfolio-card-qty svg { width: 14px; height: 14px; color: var(--brand-primary); flex-shrink: 0; }
+  .portfolio-card-desc { font-family: 'Manrope', sans-serif; font-size: 13.5px; line-height: 1.55; color: var(--text-muted); }
+  .portfolio-cta { text-align: center; margin-top: 48px; padding-top: 40px; border-top: 1px solid var(--border); }
+  .portfolio-cta-text { font-family: 'Libre Baskerville', serif; font-size: 24px; font-weight: 700; color: var(--text-body); margin-bottom: 16px; }
+  .placeholder-banner { background: #fffbe6; border: 1.5px dashed #d4a017; border-radius: 8px; padding: 14px 20px; font-family: 'Manrope', sans-serif; font-size: 13px; color: #8a6d00; margin-bottom: 24px; display: flex; align-items: center; gap: 10px; }
+  .placeholder-banner svg { width: 18px; height: 18px; flex-shrink: 0; color: #d4a017; }
 
   .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; position: relative; }
   .step { text-align: center; position: relative; }
@@ -606,6 +615,7 @@
     .services-grid { grid-template-columns: repeat(2, 1fr); }
     .why-grid { grid-template-columns: 1fr; }
     .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+    .portfolio-cta-text { font-size: 20px; }
     .steps-grid, .steps-grid[style] { grid-template-columns: repeat(3, 1fr) !important; gap: 24px; }
     .step:not(:last-child)::after { display: none; }
     .bulk-inner { grid-template-columns: 1fr; }
@@ -738,8 +748,8 @@
 
       <div class="hero-image">
         <img
-          src="https://images.pexels.com/photos/10815750/pexels-photo-10815750.jpeg?auto=compress&cs=tinysrgb&w=1200"
-          alt="Rows of engraved corporate awards on shelves — high-volume bulk production"
+          src="Image for Landing page/J_photo.jpg"
+          alt="Engraved wine glass with custom monogram — Center Gifts corporate engraving"
           loading="eager">
       </div>
 
@@ -787,38 +797,38 @@
 <section class="section" id="services">
   <div class="section-inner">
     <div class="section-header">
-      <div class="section-label">What We Offer</div>
-      <h2 class="section-heading">Your Logo, On Everything</h2>
-      <p class="section-sub">We brand the products your team and clients actually use — built for orders of 50 to 5,000+ units.</p>
+      <div class="section-label">What We Do Differently</div>
+      <h2 class="section-heading">Your Logo, Permanently Branded — Not Printed &amp; Peeling</h2>
+      <p class="section-sub">We don't slap stickers on mugs. Every product is engraved, embroidered, or printed in-house with methods that last — so your brand holds up as long as the product does.</p>
     </div>
     <div class="services-grid">
       <div class="service-card">
         <div class="service-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
         </div>
-        <h3>Engraving</h3>
-        <p>Permanent, high-detail branding on glass, metal, and wood. Your clients keep engraved gifts for years — your brand stays visible the entire time.</p>
+        <h3>Laser &amp; Rotary Engraving</h3>
+        <p>Permanent, high-detail branding etched into glass, metal, and wood. Unlike printing, engraving doesn't fade, chip, or wash off — your brand stays visible for years on desks and shelves.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
         </div>
-        <h3>Embroidery</h3>
-        <p>Professional-grade logo stitching on polos, jackets, and hats. Embroidery outlasts printing and gives your team a polished, unified look.</p>
+        <h3>Commercial Embroidery</h3>
+        <p>Thread-stitched logos on polos, jackets, and hats that outlast heat transfers by years. Your team looks polished and consistent — whether it's 50 uniforms or 500.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
         </div>
-        <h3>Garment Printing</h3>
-        <p>Screen printing and DTG for events, launches, and uniforms. Full-color prints that stay vibrant wash after wash — even on bulk orders.</p>
+        <h3>Screen &amp; DTG Printing</h3>
+        <p>Full-color garment printing for events, launches, and branded merchandise. Vibrant inks that survive industrial washing — because your brand shouldn't fade after the first cycle.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6.72 13.829c-.24.03-.48.062-.72.096m.72-.096a42.415 42.415 0 0110.56 0m-10.56 0L6.34 18m10.94-4.171c.24.03.48.062.72.096m-.72-.096L17.66 18m0 0l.229 2.523a1.125 1.125 0 01-1.12 1.227H7.231c-.662 0-1.18-.568-1.12-1.227L6.34 18m11.318 0h1.091A2.25 2.25 0 0021 15.75V9.456c0-1.081-.768-2.015-1.837-2.175a48.055 48.055 0 00-1.913-.247M6.34 18H5.25A2.25 2.25 0 013 15.75V9.456c0-1.081.768-2.015 1.837-2.175a48.041 48.041 0 011.913-.247m0 0a48.159 48.159 0 0110.5 0m-10.5 0V3.375c0-.621.504-1.125 1.125-1.125h8.25c.621 0 1.125.504 1.125 1.125v3.659"/></svg>
         </div>
-        <h3>Custom Printing</h3>
-        <p>Full-color branding on promotional items, packaging, and marketing materials. One order covers your entire campaign or event.</p>
+        <h3>Promotional &amp; Custom Printing</h3>
+        <p>Branded packaging, marketing materials, and promotional items — all produced under one roof. One order, one invoice, and every piece matches your brand exactly.</p>
       </div>
     </div>
     <!-- Product Categories Strip -->
@@ -884,69 +894,122 @@
   </div>
 </section>
 
-<!-- ===== 5. PORTFOLIO ===== -->
+<!-- ===== 5. PORTFOLIO — RECENT BULK ORDERS ===== -->
 <section class="section" id="portfolio">
   <div class="section-inner">
     <div class="section-header">
-      <div class="section-label">Recent Projects</div>
-      <h2 class="section-heading">Real Orders, Real Results</h2>
-      <p class="section-sub">A look at recent bulk projects — each one produced in-house, on time, with the client's logo.</p>
+      <div class="section-label">Our Work</div>
+      <h2 class="section-heading">Recent Bulk Orders &amp; Corporate Projects</h2>
+      <p class="section-sub">Real examples of engraved products delivered to businesses like yours.</p>
     </div>
+
     <div class="portfolio-grid">
-      <div class="portfolio-item">
-        <img src="https://images.pexels.com/photos/10815750/pexels-photo-10815750.jpeg?auto=compress&cs=tinysrgb&w=800" alt="500 engraved crystal awards for corporate gala" loading="lazy">
-        <div class="overlay">
-          <div>
-            <span class="overlay-text">Engraved Crystal Awards</span>
-            <div style="font-family:'Manrope',sans-serif; font-size:12px; color:rgba(255,255,255,0.7); margin-top:4px;">Fortune 500 Gala &middot; 500 units &middot; Logo engraved</div>
+
+      <!-- Card 1: Engraved Wine Glass — Real Estate closing gifts -->
+      <div class="portfolio-card">
+        <div class="portfolio-card-img">
+          <img src="Image for Landing page/B_photo.jpg" alt="Engraved wine glass with custom monogram for real estate closing gifts" loading="lazy">
+        </div>
+        <div class="portfolio-card-body">
+          <div class="portfolio-card-type">Real Estate Team</div>
+          <div class="portfolio-card-title">120 Engraved Wine Glasses</div>
+          <div class="portfolio-card-qty">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m8.25 3v6.75m0 0l-3-3m3 3l3-3M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"/></svg>
+            120 units
           </div>
+          <div class="portfolio-card-desc">Custom monogram engraving for client closing gifts.</div>
         </div>
       </div>
-      <div class="portfolio-item">
-        <img src="https://images.pexels.com/photos/7254428/pexels-photo-7254428.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Laser engraving custom plaques for real estate brokerage" loading="lazy">
-        <div class="overlay">
-          <div>
-            <span class="overlay-text">Custom Engraved Plaques</span>
-            <div style="font-family:'Manrope',sans-serif; font-size:12px; color:rgba(255,255,255,0.7); margin-top:4px;">Real Estate Brokerage &middot; 120 units &middot; Agent names + logo</div>
+
+      <!-- Card 2: Engraved Cutting Board — Restaurant group -->
+      <div class="portfolio-card">
+        <div class="portfolio-card-img">
+          <img src="Image for Landing page/il_1588xN.3394232271_mgew.jpg" alt="Engraved bamboo cutting board with custom name for restaurant group" loading="lazy">
+        </div>
+        <div class="portfolio-card-body">
+          <div class="portfolio-card-type">Restaurant Group</div>
+          <div class="portfolio-card-title">200 Engraved Bamboo Boards</div>
+          <div class="portfolio-card-qty">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m8.25 3v6.75m0 0l-3-3m3 3l3-3M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"/></svg>
+            200 units
           </div>
+          <div class="portfolio-card-desc">Branded bamboo recipe boards as VIP customer gifts for 3 locations.</div>
         </div>
       </div>
-      <div class="portfolio-item">
-        <img src="https://images.pexels.com/photos/300884/pexels-photo-300884.jpeg?auto=compress&cs=tinysrgb&w=800" alt="200 screen printed t-shirts for restaurant chain" loading="lazy">
-        <div class="overlay">
-          <div>
-            <span class="overlay-text">Branded Staff T-Shirts</span>
-            <div style="font-family:'Manrope',sans-serif; font-size:12px; color:rgba(255,255,255,0.7); margin-top:4px;">Restaurant Chain &middot; 200 units &middot; Full-color logo</div>
+
+      <!-- Card 3: Crystal Achievement Award — Corporate event -->
+      <div class="portfolio-card">
+        <div class="portfolio-card-img">
+          <img src="Image for Landing page/5e1ae3cb-4f07-47df-89d3-2e65a12f657c.png" alt="Engraved crystal achievement award for corporate event" loading="lazy">
+        </div>
+        <div class="portfolio-card-body">
+          <div class="portfolio-card-type">Corporate Event</div>
+          <div class="portfolio-card-title">500 Engraved Crystal Awards</div>
+          <div class="portfolio-card-qty">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m8.25 3v6.75m0 0l-3-3m3 3l3-3M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"/></svg>
+            500 units
           </div>
+          <div class="portfolio-card-desc">Annual gala recognition awards with company logo and recipient names.</div>
         </div>
       </div>
-      <div class="portfolio-item">
-        <img src="https://images.pexels.com/photos/7097290/pexels-photo-7097290.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Precision metal engraving for tech company badges" loading="lazy">
-        <div class="overlay">
-          <div>
-            <span class="overlay-text">Engraved Metal Badges</span>
-            <div style="font-family:'Manrope',sans-serif; font-size:12px; color:rgba(255,255,255,0.7); margin-top:4px;">Tech Startup &middot; 350 units &middot; Employee name + logo</div>
+
+      <!-- Card 4: Employee of the Month Plaque — Corporate recognition -->
+      <div class="portfolio-card">
+        <div class="portfolio-card-img">
+          <img src="Image for Landing page/043bd18b-72c5-483d-9413-06229d862ecf.png" alt="Employee of the Month engraved wood and brass plaque" loading="lazy">
+        </div>
+        <div class="portfolio-card-body">
+          <div class="portfolio-card-type">Corporate Recognition</div>
+          <div class="portfolio-card-title">350 Employee Award Plaques</div>
+          <div class="portfolio-card-qty">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m8.25 3v6.75m0 0l-3-3m3 3l3-3M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"/></svg>
+            350 units
           </div>
+          <div class="portfolio-card-desc">Wood &amp; brass Employee of the Month plaques for a multi-office company.</div>
         </div>
       </div>
-      <div class="portfolio-item">
-        <img src="https://images.pexels.com/photos/3342364/pexels-photo-3342364.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Embroidered polo shirts for healthcare group" loading="lazy">
-        <div class="overlay">
-          <div>
-            <span class="overlay-text">Embroidered Polo Uniforms</span>
-            <div style="font-family:'Manrope',sans-serif; font-size:12px; color:rgba(255,255,255,0.7); margin-top:4px;">Healthcare Group &middot; 150 units &middot; Logo + department</div>
+
+      <!-- Card 5: Engraved Wine Glass with logo — Event gifting -->
+      <div class="portfolio-card">
+        <div class="portfolio-card-img">
+          <img src="Image for Landing page/Aquarius_photo.jpg" alt="Engraved wine glass with custom logo for event gifting" loading="lazy">
+        </div>
+        <div class="portfolio-card-body">
+          <div class="portfolio-card-type">Event Gifting</div>
+          <div class="portfolio-card-title">150 Logo-Engraved Wine Glasses</div>
+          <div class="portfolio-card-qty">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m8.25 3v6.75m0 0l-3-3m3 3l3-3M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"/></svg>
+            150 units
           </div>
+          <div class="portfolio-card-desc">Custom logo &amp; name engraving for branded event giveaways.</div>
         </div>
       </div>
-      <div class="portfolio-item">
-        <img src="https://images.pexels.com/photos/10815750/pexels-photo-10815750.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop&crop=top" alt="Bulk trophy order for school district" loading="lazy">
-        <div class="overlay">
-          <div>
-            <span class="overlay-text">Annual Award Trophies</span>
-            <div style="font-family:'Manrope',sans-serif; font-size:12px; color:rgba(255,255,255,0.7); margin-top:4px;">School District &middot; 800 units &middot; Custom text + crest</div>
+
+      <!-- Card 6: Engraved Cognac Glass — Executive gifts -->
+      <div class="portfolio-card">
+        <div class="portfolio-card-img">
+          <img src="Image for Landing page/F_photo.jpg" alt="Engraved cognac glass with monogram for executive gifting" loading="lazy">
+        </div>
+        <div class="portfolio-card-body">
+          <div class="portfolio-card-type">Executive Gifts</div>
+          <div class="portfolio-card-title">100 Engraved Cognac Glasses</div>
+          <div class="portfolio-card-qty">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m8.25 3v6.75m0 0l-3-3m3 3l3-3M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"/></svg>
+            100 units
           </div>
+          <div class="portfolio-card-desc">Premium monogrammed cognac glasses for C-suite holiday gifts.</div>
         </div>
       </div>
+
+    </div>
+
+    <!-- Portfolio CTA -->
+    <div class="portfolio-cta">
+      <div class="portfolio-cta-text">Need Something Similar? Request Your Bulk Quote</div>
+      <a href="#quote" class="btn-primary">
+        Get Your Free Quote
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+      </a>
     </div>
   </div>
 </section>
@@ -1141,6 +1204,11 @@
       </div>
     </div>
     <div class="form-card">
+      <!-- PLACEHOLDER: Client will provide real quote form fields and product options to align with actual offerings -->
+      <div class="placeholder-banner" style="margin-bottom:20px;">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"/></svg>
+        <span><strong>Awaiting real form fields &amp; product options from client.</strong> Update form to match actual services and quote workflow.</span>
+      </div>
       <form>
         <div class="form-row">
           <div class="form-group">
