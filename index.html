@@ -606,7 +606,7 @@
     .services-grid { grid-template-columns: repeat(2, 1fr); }
     .why-grid { grid-template-columns: 1fr; }
     .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
-    .steps-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .steps-grid, .steps-grid[style] { grid-template-columns: repeat(3, 1fr) !important; gap: 24px; }
     .step:not(:last-child)::after { display: none; }
     .bulk-inner { grid-template-columns: 1fr; }
     .testimonials-grid { grid-template-columns: 1fr; }
@@ -623,7 +623,7 @@
     .hero-ctas { flex-direction: column; align-items: stretch; }
     .value-props { grid-template-columns: 1fr; }
     .services-grid { grid-template-columns: 1fr; }
-    .steps-grid { grid-template-columns: 1fr; }
+    .steps-grid, .steps-grid[style] { grid-template-columns: 1fr !important; }
     .portfolio-grid { grid-template-columns: 1fr; }
     .form-row { grid-template-columns: 1fr; }
     .proof-card { position: relative; bottom: auto; left: auto; margin-top: 16px; }
@@ -680,11 +680,11 @@
       <p class="hero-sub">Reliable quality, consistent execution, and on-time delivery for orders from 50 to 5,000+ units.</p>
 
       <div class="hero-ctas">
-        <a href="#" class="btn-primary">
-          Request a Bulk Quote
+        <a href="#quote" class="btn-primary">
+          Get Your Free Mockup
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
         </a>
-        <a href="#" class="btn-secondary">View Bulk Projects</a>
+        <a href="#quote" class="btn-secondary">Request Bulk Pricing</a>
       </div>
 
       <div class="value-props">
@@ -762,14 +762,23 @@
 <!-- ===== 2. SOCIAL PROOF / TRUST ===== -->
 <section class="trust">
   <div class="trust-inner">
-    <span class="trust-text">Trusted by 200+ companies</span>
+    <span class="trust-text">We work with</span>
     <div class="trust-logos">
-      <span class="trust-logo">Marriott</span>
-      <span class="trust-logo">Oracle</span>
-      <span class="trust-logo">Deloitte</span>
-      <span class="trust-logo">Hyatt</span>
-      <span class="trust-logo">Kaiser</span>
-      <span class="trust-logo">Boeing</span>
+      <span class="trust-logo">Real Estate Teams</span>
+      <span class="trust-logo">Restaurants &amp; Hotels</span>
+      <span class="trust-logo">Tech Companies</span>
+      <span class="trust-logo">Healthcare Groups</span>
+      <span class="trust-logo">Schools &amp; Nonprofits</span>
+    </div>
+  </div>
+  <div class="trust-inner" style="margin-top:20px; justify-content:center;">
+    <div class="trust-logos" style="justify-content:center; gap:32px; opacity:0.35;">
+      <span class="trust-logo" style="border:1.5px dashed var(--text-muted); padding:8px 18px; border-radius:6px; font-size:12px;">Your Logo</span>
+      <span class="trust-logo" style="border:1.5px dashed var(--text-muted); padding:8px 18px; border-radius:6px; font-size:12px;">Your Logo</span>
+      <span class="trust-logo" style="border:1.5px dashed var(--text-muted); padding:8px 18px; border-radius:6px; font-size:12px;">Your Logo</span>
+      <span class="trust-logo" style="border:1.5px dashed var(--text-muted); padding:8px 18px; border-radius:6px; font-size:12px;">Your Logo</span>
+      <span class="trust-logo" style="border:1.5px dashed var(--text-muted); padding:8px 18px; border-radius:6px; font-size:12px;">Your Logo</span>
+      <span class="trust-logo" style="border:1.5px dashed var(--text-muted); padding:8px 18px; border-radius:6px; font-size:12px;">Your Logo</span>
     </div>
   </div>
 </section>
@@ -779,8 +788,8 @@
   <div class="section-inner">
     <div class="section-header">
       <div class="section-label">What We Offer</div>
-      <h2 class="section-heading">Custom Branding Solutions at Scale</h2>
-      <p class="section-sub">From engraving to embroidery, we deliver consistent, high-quality branding across every surface and material.</p>
+      <h2 class="section-heading">Your Logo, On Everything</h2>
+      <p class="section-sub">We brand the products your team and clients actually use — built for orders of 50 to 5,000+ units.</p>
     </div>
     <div class="services-grid">
       <div class="service-card">
@@ -788,29 +797,40 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
         </div>
         <h3>Engraving</h3>
-        <p>Laser engraving on glass, metal, wood, and acrylic. Perfect for awards, plaques, and corporate gifts.</p>
+        <p>Permanent, high-detail branding on glass, metal, and wood. Your clients keep engraved gifts for years — your brand stays visible the entire time.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
         </div>
         <h3>Embroidery</h3>
-        <p>Custom logo embroidery on polos, jackets, hats, and uniforms. Durable, professional finishes for your brand.</p>
+        <p>Professional-grade logo stitching on polos, jackets, and hats. Embroidery outlasts printing and gives your team a polished, unified look.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
         </div>
         <h3>Garment Printing</h3>
-        <p>Screen printing and DTG for t-shirts, hoodies, and workwear. Vibrant prints that hold up to heavy use.</p>
+        <p>Screen printing and DTG for events, launches, and uniforms. Full-color prints that stay vibrant wash after wash — even on bulk orders.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6.72 13.829c-.24.03-.48.062-.72.096m.72-.096a42.415 42.415 0 0110.56 0m-10.56 0L6.34 18m10.94-4.171c.24.03.48.062.72.096m-.72-.096L17.66 18m0 0l.229 2.523a1.125 1.125 0 01-1.12 1.227H7.231c-.662 0-1.18-.568-1.12-1.227L6.34 18m11.318 0h1.091A2.25 2.25 0 0021 15.75V9.456c0-1.081-.768-2.015-1.837-2.175a48.055 48.055 0 00-1.913-.247M6.34 18H5.25A2.25 2.25 0 013 15.75V9.456c0-1.081.768-2.015 1.837-2.175a48.041 48.041 0 011.913-.247m0 0a48.159 48.159 0 0110.5 0m-10.5 0V3.375c0-.621.504-1.125 1.125-1.125h8.25c.621 0 1.125.504 1.125 1.125v3.659"/></svg>
         </div>
         <h3>Custom Printing</h3>
-        <p>Full-color printing on promotional items, packaging, and marketing materials for events and campaigns.</p>
+        <p>Full-color branding on promotional items, packaging, and marketing materials. One order covers your entire campaign or event.</p>
       </div>
+    </div>
+    <!-- Product Categories Strip -->
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin-top:40px; padding-top:32px; border-top:1px solid var(--border);">
+      <span style="font-family:'Manrope',sans-serif; font-size:13px; font-weight:600; color:var(--text-muted); background:var(--white); border:1px solid var(--border); padding:8px 18px; border-radius:100px;">Apparel</span>
+      <span style="font-family:'Manrope',sans-serif; font-size:13px; font-weight:600; color:var(--text-muted); background:var(--white); border:1px solid var(--border); padding:8px 18px; border-radius:100px;">Workwear</span>
+      <span style="font-family:'Manrope',sans-serif; font-size:13px; font-weight:600; color:var(--text-muted); background:var(--white); border:1px solid var(--border); padding:8px 18px; border-radius:100px;">Bags &amp; Totes</span>
+      <span style="font-family:'Manrope',sans-serif; font-size:13px; font-weight:600; color:var(--text-muted); background:var(--white); border:1px solid var(--border); padding:8px 18px; border-radius:100px;">Awards &amp; Plaques</span>
+      <span style="font-family:'Manrope',sans-serif; font-size:13px; font-weight:600; color:var(--text-muted); background:var(--white); border:1px solid var(--border); padding:8px 18px; border-radius:100px;">Drinkware</span>
+      <span style="font-family:'Manrope',sans-serif; font-size:13px; font-weight:600; color:var(--text-muted); background:var(--white); border:1px solid var(--border); padding:8px 18px; border-radius:100px;">Pens &amp; Office</span>
+      <span style="font-family:'Manrope',sans-serif; font-size:13px; font-weight:600; color:var(--text-muted); background:var(--white); border:1px solid var(--border); padding:8px 18px; border-radius:100px;">Hats &amp; Caps</span>
+      <span style="font-family:'Manrope',sans-serif; font-size:13px; font-weight:600; color:var(--text-muted); background:var(--white); border:1px solid var(--border); padding:8px 18px; border-radius:100px;">Gift Sets</span>
     </div>
   </div>
 </section>
@@ -868,34 +888,64 @@
 <section class="section" id="portfolio">
   <div class="section-inner">
     <div class="section-header">
-      <div class="section-label">Our Work</div>
-      <h2 class="section-heading">See What We Produce</h2>
-      <p class="section-sub">From engraved crystal awards to screen-printed uniforms — a sample of recent bulk projects.</p>
+      <div class="section-label">Recent Projects</div>
+      <h2 class="section-heading">Real Orders, Real Results</h2>
+      <p class="section-sub">A look at recent bulk projects — each one produced in-house, on time, with the client's logo.</p>
     </div>
     <div class="portfolio-grid">
       <div class="portfolio-item">
-        <img src="https://images.pexels.com/photos/10815750/pexels-photo-10815750.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Bulk engraved corporate awards" loading="lazy">
-        <div class="overlay"><span class="overlay-text">Bulk Corporate Awards</span></div>
+        <img src="https://images.pexels.com/photos/10815750/pexels-photo-10815750.jpeg?auto=compress&cs=tinysrgb&w=800" alt="500 engraved crystal awards for corporate gala" loading="lazy">
+        <div class="overlay">
+          <div>
+            <span class="overlay-text">Engraved Crystal Awards</span>
+            <div style="font-family:'Manrope',sans-serif; font-size:12px; color:rgba(255,255,255,0.7); margin-top:4px;">Fortune 500 Gala &middot; 500 units &middot; Logo engraved</div>
+          </div>
+        </div>
       </div>
       <div class="portfolio-item">
-        <img src="https://images.pexels.com/photos/7254428/pexels-photo-7254428.jpeg?auto=compress&cs=tinysrgb&w=800" alt="CNC laser engraving in action" loading="lazy">
-        <div class="overlay"><span class="overlay-text">Laser Engraving</span></div>
+        <img src="https://images.pexels.com/photos/7254428/pexels-photo-7254428.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Laser engraving custom plaques for real estate brokerage" loading="lazy">
+        <div class="overlay">
+          <div>
+            <span class="overlay-text">Custom Engraved Plaques</span>
+            <div style="font-family:'Manrope',sans-serif; font-size:12px; color:rgba(255,255,255,0.7); margin-top:4px;">Real Estate Brokerage &middot; 120 units &middot; Agent names + logo</div>
+          </div>
+        </div>
       </div>
       <div class="portfolio-item">
-        <img src="https://images.pexels.com/photos/300884/pexels-photo-300884.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Screen printing production line" loading="lazy">
-        <div class="overlay"><span class="overlay-text">Garment Printing</span></div>
+        <img src="https://images.pexels.com/photos/300884/pexels-photo-300884.jpeg?auto=compress&cs=tinysrgb&w=800" alt="200 screen printed t-shirts for restaurant chain" loading="lazy">
+        <div class="overlay">
+          <div>
+            <span class="overlay-text">Branded Staff T-Shirts</span>
+            <div style="font-family:'Manrope',sans-serif; font-size:12px; color:rgba(255,255,255,0.7); margin-top:4px;">Restaurant Chain &middot; 200 units &middot; Full-color logo</div>
+          </div>
+        </div>
       </div>
       <div class="portfolio-item">
-        <img src="https://images.pexels.com/photos/7097290/pexels-photo-7097290.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Precision laser engraving machine" loading="lazy">
-        <div class="overlay"><span class="overlay-text">Precision Equipment</span></div>
+        <img src="https://images.pexels.com/photos/7097290/pexels-photo-7097290.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Precision metal engraving for tech company badges" loading="lazy">
+        <div class="overlay">
+          <div>
+            <span class="overlay-text">Engraved Metal Badges</span>
+            <div style="font-family:'Manrope',sans-serif; font-size:12px; color:rgba(255,255,255,0.7); margin-top:4px;">Tech Startup &middot; 350 units &middot; Employee name + logo</div>
+          </div>
+        </div>
       </div>
       <div class="portfolio-item">
-        <img src="https://images.pexels.com/photos/3342364/pexels-photo-3342364.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Custom embroidery work" loading="lazy">
-        <div class="overlay"><span class="overlay-text">Custom Embroidery</span></div>
+        <img src="https://images.pexels.com/photos/3342364/pexels-photo-3342364.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Embroidered polo shirts for healthcare group" loading="lazy">
+        <div class="overlay">
+          <div>
+            <span class="overlay-text">Embroidered Polo Uniforms</span>
+            <div style="font-family:'Manrope',sans-serif; font-size:12px; color:rgba(255,255,255,0.7); margin-top:4px;">Healthcare Group &middot; 150 units &middot; Logo + department</div>
+          </div>
+        </div>
       </div>
       <div class="portfolio-item">
-        <img src="https://images.pexels.com/photos/10815750/pexels-photo-10815750.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop&crop=top" alt="Award production at scale" loading="lazy">
-        <div class="overlay"><span class="overlay-text">Volume Production</span></div>
+        <img src="https://images.pexels.com/photos/10815750/pexels-photo-10815750.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop&crop=top" alt="Bulk trophy order for school district" loading="lazy">
+        <div class="overlay">
+          <div>
+            <span class="overlay-text">Annual Award Trophies</span>
+            <div style="font-family:'Manrope',sans-serif; font-size:12px; color:rgba(255,255,255,0.7); margin-top:4px;">School District &middot; 800 units &middot; Custom text + crest</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -907,28 +957,33 @@
     <div class="section-header">
       <div class="section-label">Simple Process</div>
       <h2 class="section-heading">How It Works</h2>
-      <p class="section-sub">From request to delivery in four simple steps. No complexity, no back-and-forth.</p>
+      <p class="section-sub">Send us your logo. We handle the rest.</p>
     </div>
-    <div class="steps-grid">
+    <div class="steps-grid" style="grid-template-columns:repeat(5,1fr);">
       <div class="step">
         <div class="step-num">1</div>
-        <h3>Submit Your Request</h3>
-        <p>Tell us what you need — items, quantity, branding details, and timeline.</p>
+        <h3>Submit Your Logo</h3>
+        <p>Upload your logo and tell us what you need.</p>
       </div>
       <div class="step">
         <div class="step-num">2</div>
-        <h3>Receive a Mockup</h3>
-        <p>We send a digital proof showing exactly how your branding will appear on the product.</p>
+        <h3>Get a Free Mockup</h3>
+        <p>We create a digital proof of your branded product.</p>
       </div>
       <div class="step">
         <div class="step-num">3</div>
-        <h3>Approve &amp; Production</h3>
-        <p>Once approved, production begins immediately. We keep you updated throughout.</p>
+        <h3>Approve</h3>
+        <p>Review the mockup and confirm. That's it.</p>
       </div>
       <div class="step">
         <div class="step-num">4</div>
+        <h3>Production</h3>
+        <p>We produce your order in-house, with quality checks on every unit.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">5</div>
         <h3>Delivery</h3>
-        <p>Your order is quality-checked, carefully packed, and shipped — or available for local pickup.</p>
+        <p>Shipped to your door — or free local pickup in Orange County.</p>
       </div>
     </div>
   </div>
@@ -1042,10 +1097,10 @@
 <!-- ===== 9. FINAL CTA ===== -->
 <section class="final-cta">
   <div class="section-inner">
-    <h2 class="section-heading">Ready to Start Your Bulk Order?</h2>
-    <p class="section-sub">Get a custom quote in under 24 hours. No commitments, no minimums on quotes — just straightforward pricing.</p>
+    <h2 class="section-heading">Send Us Your Logo, Get a Free Mockup</h2>
+    <p class="section-sub">See exactly how your branding will look — no cost, no commitment. Most mockups delivered within 24 hours.</p>
     <a href="#quote" class="btn-white">
-      Request a Bulk Quote
+      Get Your Free Mockup
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
     </a>
   </div>
@@ -1115,10 +1170,19 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="notes">Project Details</label>
-          <textarea id="notes" placeholder="Tell us about your project — products, branding, timeline, and any special requirements."></textarea>
+          <label for="logo">Upload Your Logo <span style="font-weight:400; color:var(--text-muted);">(optional)</span></label>
+          <div style="border:2px dashed var(--border); border-radius:8px; padding:20px; text-align:center; cursor:pointer; position:relative; transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--brand-primary)'" onmouseout="this.style.borderColor='var(--border)'">
+            <input type="file" id="logo" accept=".png,.jpg,.jpeg,.svg,.ai,.pdf,.eps" style="position:absolute; inset:0; opacity:0; cursor:pointer;">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:24px; height:24px; color:var(--text-muted); margin-bottom:6px; display:block; margin-left:auto; margin-right:auto;"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"/></svg>
+            <span style="font-family:'Manrope',sans-serif; font-size:13px; color:var(--text-muted);">Drag &amp; drop or <span style="color:var(--brand-primary); font-weight:600;">browse</span></span>
+            <div style="font-family:'Manrope',sans-serif; font-size:11px; color:var(--text-muted); opacity:0.6; margin-top:4px;">PNG, JPG, SVG, AI, PDF, or EPS</div>
+          </div>
         </div>
-        <button type="submit" class="form-submit">Submit Quote Request</button>
+        <div class="form-group">
+          <label for="notes">Notes <span style="font-weight:400; color:var(--text-muted);">(optional)</span></label>
+          <textarea id="notes" placeholder="Products, timeline, or special requirements." style="min-height:72px;"></textarea>
+        </div>
+        <button type="submit" class="form-submit">Get Your Free Mockup</button>
       </form>
     </div>
   </div>
